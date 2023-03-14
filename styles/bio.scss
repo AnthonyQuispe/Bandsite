@@ -1,0 +1,7 @@
+@use "partials/globals";
+@use "partials/typography" as *;
+@use "partials/mixins" as *;
+
+* {
+  font-family: "Avenir Next";
+}

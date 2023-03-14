@@ -1,32 +1,3 @@
-.bandsite-black {
-  color: #323232;
-}
-
-.silver {
-  color: #afafaf;
-}
-
-.white {
-  color: #ffffff;
-}
-
-.bandsite-darkblack {
-  color: #000000;
-}
-
-.mercury {
-  color: #e1e1e1;
-}
-
-.alabaster {
-  color: #fafafa;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
 @font-face {
   font-family: "Avenir Next";
   src: url("/assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
@@ -37,11 +8,15 @@
   src: url("/assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
   font-weight: 600;
 }
+
 @font-face {
   font-family: "Avenir Next";
   src: url("/assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
   font-weight: 700;
 }
+
+// Desktop & Tablet Text Styles
+
 .page-header {
   font-size: 60px;
   line-height: 68px;
@@ -77,12 +52,12 @@
   line-height: 20px;
   font-weight: 400;
 }
-
 .buttons {
   font-size: 12px;
   line-height: 20px;
   font-weight: 400;
 }
+// Mobile Text Styles
 
 .page-header--mobile {
   font-size: 24px;
@@ -125,7 +100,3 @@
   line-height: 20px;
   font-weight: 400;
 }
-
-* {
-  font-family: "Avenir Next";
-}/*# sourceMappingURL=bio.css.map */

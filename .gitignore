@@ -4,3 +4,7 @@
 /temp
 #ignore 
 .DS_Store
+
+*.css.map
+
+*CopyDeck/
