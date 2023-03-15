@@ -1,32 +1,3 @@
-.bandsite-black {
-  color: #323232;
-}
-
-.silver {
-  color: #afafaf;
-}
-
-.white {
-  color: #ffffff;
-}
-
-.bandsite-darkblack {
-  color: #000000;
-}
-
-.mercury {
-  color: #e1e1e1;
-}
-
-.alabaster {
-  color: #fafafa;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
 @font-face {
   font-family: "Avenir Next";
   src: url("/assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
@@ -34,7 +5,7 @@
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("/assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
+  src: url("/assets/fonts/AvenirNextLTPro-Demi.otf") format("otf");
   font-weight: 600;
 }
 @font-face {
@@ -42,9 +13,48 @@
   src: url("/assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
   font-weight: 700;
 }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir Next";
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  color: #ffffff;
+}
+
+.nav__logo {
+  align-self: center;
+  width: 40%;
+  height: auto;
+  padding: 16px 0 8px 0;
+}
+
+.nav__bar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer__icons {
+  display: flex;
+  background-color: #323232;
+}
+
+.about__title {
+  padding: 24px 16px 16px 16px;
+}
+@media screen and (min-width: 768px) {
+  .about__title {
+    padding: 48px 36px 36px 36px;
+  }
+}
+
 .page-header {
-  font-size: 60px;
-  line-height: 68px;
+  font-size: 24px;
+  line-height: 32px;
   font-weight: 700;
 }
 
@@ -126,6 +136,57 @@
   font-weight: 400;
 }
 
-* {
-  font-family: "Avenir Next";
+.hero {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-image: url("/assets/images/hero-bio.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  width: 100%;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+.gallery__item {
+  text-align: center;
+  font-size: 5rem;
+  border-radius: 5px;
+}
+.gallery .gallery__item-img {
+  width: 100%;
+  height: 25vh;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .gallery__item {
+    width: 40%;
+    margin: 3vw 0;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  .gallery__item {
+    width: 30%;
+    margin: 1.25vw 0;
+  }
+}
+
+.about__img {
+  width: 100%;
+  height: 25vh;
+}
+
+.hero__title {
+  padding: 0 16px;
 }/*# sourceMappingURL=bio.css.map */

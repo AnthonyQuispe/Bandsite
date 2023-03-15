@@ -5,7 +5,7 @@
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("/assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
+  src: url("/assets/fonts/AvenirNextLTPro-Demi.otf") format("otf");
   font-weight: 600;
 }
 
@@ -13,90 +13,4 @@
   font-family: "Avenir Next";
   src: url("/assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
   font-weight: 700;
-}
-
-// Desktop & Tablet Text Styles
-
-.page-header {
-  font-size: 60px;
-  line-height: 68px;
-  font-weight: 700;
-}
-
-.section-header {
-  font-size: 36px;
-  line-height: 44px;
-  font-weight: 700;
-}
-
-.subheader {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 600;
-}
-
-.body-copy {
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 400;
-}
-
-.footer-copy {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-}
-
-.labels {
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 400;
-}
-.buttons {
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 400;
-}
-// Mobile Text Styles
-
-.page-header--mobile {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
-}
-
-.section-header--mobile {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 600;
-}
-
-.subheader--mobile {
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 600;
-}
-
-.body-copy--mobile {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
-}
-
-.footer-copy--mobile {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
-}
-
-.labels--mobile {
-  font-size: 10px;
-  line-height: 20px;
-  font-weight: 700;
-}
-
-.buttons--mobile {
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 400;
 }
