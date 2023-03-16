@@ -1,3 +1,5 @@
+@use "./mixins" as *;
+
 @font-face {
   font-family: "Avenir Next";
   src: url("/assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
@@ -13,4 +15,85 @@
   font-family: "Avenir Next";
   src: url("/assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
   font-weight: 700;
+}
+
+// Desktop & Tablet Text Styles
+
+// Mobile Text Styles
+
+.page-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+
+  @include tablet-desktop {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+}
+
+.section-header {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  // padding: 24px 16px 16px 16px;
+
+  @include tablet-desktop {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+}
+
+.subheader {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  padding: 0 16px;
+
+  @include tablet-desktop {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+  }
+}
+
+.body-copy {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  padding: 8px 16px;
+  width: 88%;
+  @include tablet-desktop {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}
+
+.footer-copy {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  padding: 0 16px;
+
+  @include tablet-desktop {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+}
+
+.labelsbuttons {
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 0 16px;
+
+  @include tablet-desktop {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }
 }

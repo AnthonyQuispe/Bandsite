@@ -13,9 +13,95 @@
   src: url("/assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
   font-weight: 700;
 }
+.page-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .page-header {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+}
+
+.section-header {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .section-header {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+}
+
+.subheader {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .subheader {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+  }
+}
+
+.body-copy {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  padding: 8px 16px;
+  width: 88%;
+}
+@media screen and (min-width: 768px) {
+  .body-copy {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}
+
+.footer-copy {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .footer-copy {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+}
+
+.labelsbuttons {
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .labelsbuttons {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: "Avenir Next";
 }
 
@@ -30,110 +116,21 @@
   align-self: center;
   width: 40%;
   height: auto;
-  padding: 16px 0 8px 0;
+  padding: 16px 16px 8px 16px;
 }
 
 .nav__bar {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding: 0px 0px 8px 0;
 }
 
-.footer__icons {
-  display: flex;
+.nav__description {
+  padding: 0 16px;
+}
+
+.footer {
   background-color: #323232;
-}
-
-.about__title {
-  padding: 24px 16px 16px 16px;
-}
-@media screen and (min-width: 768px) {
-  .about__title {
-    padding: 48px 36px 36px 36px;
-  }
-}
-
-.page-header {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
-}
-
-.section-header {
-  font-size: 36px;
-  line-height: 44px;
-  font-weight: 700;
-}
-
-.subheader {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 600;
-}
-
-.body-copy {
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 400;
-}
-
-.footer-copy {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-}
-
-.labels {
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 400;
-}
-
-.buttons {
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 400;
-}
-
-.page-header--mobile {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
-}
-
-.section-header--mobile {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 600;
-}
-
-.subheader--mobile {
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 600;
-}
-
-.body-copy--mobile {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
-}
-
-.footer-copy--mobile {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
-}
-
-.labels--mobile {
-  font-size: 10px;
-  line-height: 20px;
-  font-weight: 700;
-}
-
-.buttons--mobile {
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 400;
 }
 
 .hero {
@@ -143,8 +140,40 @@
   background-image: url("/assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
-  height: 30vh;
+  height: 27vh;
   width: 100%;
+  position: relative;
+}
+
+.hero__border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 27vh;
+  background-color: #323232;
+  opacity: 0.5;
+}
+
+.headlines__img {
+  width: 100%;
+  height: 25vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.hero__title {
+  padding: 0 16px;
+  z-index: 1;
+}
+
+.headlines__img--container {
+  padding: 0 1rem;
+  height: 25vh;
+  width: 90%;
+  border: 0;
 }
 
 .gallery {
@@ -167,26 +196,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-evenly;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 768px) {
-  .gallery__item {
     width: 40%;
     margin: 3vw 0;
   }
-}
-@media screen and (min-width: 768px) and (min-width: 1024px) {
-  .gallery__item {
-    width: 30%;
-    margin: 1.25vw 0;
-  }
-}
-
-.about__img {
-  width: 100%;
-  height: 25vh;
-}
-
-.hero__title {
-  padding: 0 16px;
 }/*# sourceMappingURL=bio.css.map */
