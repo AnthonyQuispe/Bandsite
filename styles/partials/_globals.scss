@@ -16,6 +16,11 @@ body {
   flex-direction: column;
   background-color: $bandsite-black;
   color: $white;
+  padding: 0 16px;
+
+  @include tablet-desktop {
+    padding: 0 36px;
+  }
 }
 
 .nav__logo {
@@ -36,4 +41,49 @@ body {
 
 .footer {
   background-color: $bandsite-black;
+  color: $white;
+}
+
+.footer__icons {
+  display: flex;
+  padding: 0 16px;
+  @include tablet-desktop {
+    padding: 0 36px;
+  }
+}
+
+.footer__title {
+  padding: 0 16px;
+  @include tablet-desktop {
+    padding: 0 36px;
+  }
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  @include tablet-desktop {
+    padding: 0 36px;
+  }
+}
+
+.footer__logo {
+  padding: 0 16px;
+  @include tablet-desktop {
+    padding: 0 36px;
+  }
+}
+
+.footer__copyright {
+  padding: 0 16px;
+  @include tablet-desktop {
+    padding: 0 36px;
+    @include desktop {
+      padding: 0 80px;
+    }
+  }
+  // @include desktop {
+  //   padding: 0 80px;
+  // }
 }

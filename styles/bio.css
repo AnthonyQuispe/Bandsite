@@ -110,6 +110,12 @@ body {
   flex-direction: column;
   background-color: #323232;
   color: #ffffff;
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    padding: 0 36px;
+  }
 }
 
 .nav__logo {
@@ -131,6 +137,60 @@ body {
 
 .footer {
   background-color: #323232;
+  color: #ffffff;
+}
+
+.footer__icons {
+  display: flex;
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .footer__icons {
+    padding: 0 36px;
+  }
+}
+
+.footer__title {
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .footer__title {
+    padding: 0 36px;
+  }
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .footer__info {
+    padding: 0 36px;
+  }
+}
+
+.footer__logo {
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    padding: 0 36px;
+  }
+}
+
+.footer__copyright {
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    padding: 0 36px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .footer__copyright {
+    padding: 0 80px;
+  }
 }
 
 .hero {
@@ -155,40 +215,54 @@ body {
   opacity: 0.5;
 }
 
+.hero__title {
+  padding: 0 16px;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    padding: 0 36px;
+  }
+}
+
+.headlines__title {
+  padding: 24px 16px 16px 16px;
+}
+@media screen and (min-width: 768px) {
+  .headlines__title {
+    padding: 48px 36px 36px 36px;
+  }
+}
+
 .headlines__img {
   width: 100%;
-  height: 25vh;
+  height: 23vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: bottom;
      object-position: bottom;
 }
 
-.hero__title {
-  padding: 0 16px;
-  z-index: 1;
-}
-
 .headlines__img--container {
-  padding: 0 1rem;
+  display: flex;
+  padding: 0 1rem 16px 16px;
   height: 25vh;
-  width: 90%;
   border: 0;
 }
 
 .gallery {
   display: flex;
   flex-direction: column;
-  margin: 0 20px;
+  background-color: #fafafa;
+  padding: 16px 16px 8px 16px;
 }
 .gallery__item {
   text-align: center;
-  font-size: 5rem;
-  border-radius: 5px;
 }
 .gallery .gallery__item-img {
   width: 100%;
   height: 25vh;
+  margin: 4px 0;
 }
 @media screen and (min-width: 768px) {
   .gallery {
@@ -198,5 +272,42 @@ body {
     align-content: space-evenly;
     width: 40%;
     margin: 3vw 0;
+  }
+}
+
+.headlines__quote {
+  padding: 0px 16px 8px 16px;
+}
+@media screen and (min-width: 768px) {
+  .headlines__quote {
+    padding: 0 36px;
+  }
+}
+
+.headlines__text {
+  padding: 8px 16px;
+}
+@media screen and (min-width: 768px) {
+  .headlines__text {
+    padding: 0 36px;
+  }
+}
+
+.headlines__bottom {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .headlines__bottom {
+    flex-direction: row;
+  }
+}
+
+.headlines__subheading {
+  padding: 0px 16px;
+}
+@media screen and (min-width: 768px) {
+  .headlines__subheading {
+    padding: 0 36px;
   }
 }/*# sourceMappingURL=bio.css.map */
