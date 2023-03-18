@@ -9,17 +9,15 @@
   background-image: url("/assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
-  height: 27vh;
+  min-height: 27vh;
   width: 100%;
   position: relative;
 }
 
 .hero__border {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 27vh;
+  min-height: 27vh;
   background-color: $bandsite-black;
   opacity: 0.5;
 }
@@ -27,17 +25,19 @@
 .hero__title {
   padding: 0 16px;
   z-index: 1;
+  font-weight: 500;
 
   @include tablet-desktop {
-    padding: 0 36px;
+    padding: 0 2.25rem;
   }
 }
 
 .headlines__title {
-  padding: 24px 16px 16px 16px;
+  padding: 1.5rem 1rem 1rem 1rem;
+  font-weight: 600;
 
   @include tablet-desktop {
-    padding: 48px 36px 36px 36px;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
   }
 }
 
@@ -46,13 +46,21 @@
   height: 23vh;
   object-fit: cover;
   object-position: bottom;
-  // padding: 0 1rem;
 }
 .headlines__img--container {
   display: flex;
-  padding: 0 1rem 16px 16px;
+  padding: 0 1rem 1rem 1rem;
   height: 25vh;
   border: 0;
+}
+
+.headlines__quote {
+  font-weight: 550;
+  width: 84%;
+}
+
+.headlines__subheading {
+  font-weight: 500;
 }
 
 // Gallery
@@ -60,7 +68,7 @@
   display: flex;
   flex-direction: column;
   background-color: $alabaster;
-  padding: 16px 16px 8px 16px;
+  padding: 1rem 1rem 0.5rem 1rem;
 
   &__item {
     text-align: center;
@@ -80,20 +88,25 @@
     width: 40%;
     margin: 3vw 0;
   }
+
+  &__title {
+    font-weight: 600;
+    padding: 0 0 0.5rem 0;
+  }
 }
 
 .headlines__quote {
-  padding: 0px 16px 8px 16px;
+  padding: 0 1rem 0.5rem 1rem;
 
   @include tablet-desktop {
-    padding: 0 36px;
+    padding: 0 2.25rem;
   }
 }
 
 .headlines__text {
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   @include tablet-desktop {
-    padding: 0 36px;
+    padding: 0 2.25rem;
   }
 }
 
@@ -106,8 +119,8 @@
 }
 
 .headlines__subheading {
-  padding: 0px 16px;
+  padding: 0 1rem;
   @include tablet-desktop {
-    padding: 0 36px;
+    padding: 0 2.25rem;
   }
 }
