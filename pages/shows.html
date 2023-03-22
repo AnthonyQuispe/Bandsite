@@ -5,9 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bandsite Shows</title>
-    <link rel="stylesheet" href="/styles/shows.scss"
+    <link rel="stylesheet" href="/styles/shows.css"
   </head>
   <body>
-    <header></header>
+    <!-- Header Section -->
+    <header class="header">
+      <!-- Nav Section -->
+      <nav class="nav">
+        <a href="/index.html" class="nav__logo"
+          ><img
+            class="nav__logo"
+            src="/assets/logos/Logo-bandsite.svg"
+            alt="Bandsite Logo"
+        /></a>
+        <div class="nav__bar">
+          <a href="/index.html" class="nav__bar--links body-copy">Biography</a>
+          <a href="./shows.html" class="nav__bar--links body-copy">Shows</a>
+        </div>
+      </nav>
+    </header>
+    <footer class="footer">
+      <div class="footer__icon--container">
+        <div class="footer__left--container">
+          <h2 class="footer__title section-header">Get in Touch</h2>
+          <div class="footer__icons">
+            <a href="https://www.instagram.com/"
+              ><img
+                class="footer__icons--imgs"
+                src="/assets/icons/SVG/Icon-instagram.svg"
+            /></a>
+            <img
+              class="footer__icons--imgs"
+              src="/assets/icons/SVG/Icon-facebook.svg"
+            />
+            <img
+              class="footer__icons--imgs"
+              src="/assets/icons/SVG/Icon-twitter.svg"
+            />
+          </div>
+        </div>
+
+        <img
+          class="footer__backlogo"
+          src="/assets/logos/Logo-bandsite.svg"
+          alt="bandsite logo"
+        />
+      </div>
+      <section class="footer__info">
+        <div class="footer__company">
+          <p class="footer__company--title footer-copy">Cam Adams</p>
+          <p class="footer__company--title footer-copy">
+            The Bees Knees Management
+          </p>
+          <p class="footer__company--address footer-copy">
+            503 Broadway Penthouse,
+          </p>
+          <p class="footer__company--state footer-copy">
+            New York, NY 10012, USA
+          </p>
+          <p class="footer__email footer-copy">info@thebeeskness.com</p>
+        </div>
+
+        <div class="footer__agent">
+          <p class="footer__agent--title footer-copy">Pearl Gregg</p>
+          <p class="footer__agent--title footer-copy">Limitless Artist Group</p>
+          <p class="footer__agent--booking footer-copy">Booking Agent for</p>
+          <p class="footer__agent--state footer-copy">
+            US / South America / Japan
+          </p>
+          <p class="footer__email footer-copy">pearl.gregg@limitlessag.com</p>
+        </div>
+
+        <div class="footer__agent">
+          <p class="footer__agent--title footer-copy">Carson Whyte</p>
+          <p class="footer__agent--title footer-copy">ARCH Entertainment</p>
+          <p class="footer__agent--booking footer-copy">Booking Agent for</p>
+          <p class="footer__agent--address footer-copy">UK/EU/AU</p>
+          <p class="footer__email footer-copy">cwhyte@archentertainment.com</p>
+        </div>
+      </section>
+
+      <img class="footer__logo" src="/assets/logos/Logo-bandsite.svg" />
+      <p class="footer__copyright labelsbuttons">
+        Copyright The Bees Knees © 2021 All Rights Reserved
+      </p>
+    </footer>
+    <script src="/scripts/build-shows-page.js"></script>
   </body>
 </html>

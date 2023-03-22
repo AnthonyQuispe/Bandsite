@@ -200,10 +200,10 @@
 .comment {
   display: flex;
   flex-direction: column;
+  padding: 16px;
 
   &__top {
     display: flex;
-    flex-direction: column;
 
     &--name {
       width: 100%;
@@ -235,4 +235,20 @@
       font-weight: 700;
     }
   }
+  &__right {
+    padding: 12px;
+  }
+}
+
+.avatars {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.divider {
+  stroke-width: 1px;
+  background-color: $mercury;
 }

@@ -549,10 +549,10 @@ body {
 .comment {
   display: flex;
   flex-direction: column;
+  padding: 16px;
 }
 .comment__top {
   display: flex;
-  flex-direction: column;
 }
 .comment__top--name {
   width: 100%;
@@ -581,4 +581,22 @@ body {
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-weight: 700;
+}
+.comment__right {
+  padding: 12px;
+}
+
+.avatars {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+}
+
+.divider {
+  stroke-width: 1px;
+  background-color: #e1e1e1;
 }/*# sourceMappingURL=bio.css.map */
