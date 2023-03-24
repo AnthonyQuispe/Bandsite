@@ -28,37 +28,33 @@ body {
     }
   }
 
-  &__bar {
+  &__links {
     display: flex;
     justify-content: space-around;
     @include tablet-desktop {
       align-items: center;
     }
+  }
 
-    &--links {
-      text-decoration: none;
-      color: $white;
-      text-align: center;
-      padding: 0.5rem 0 0.5rem 0;
-      @include tablet-desktop {
-        align-items: center;
-        padding: 1.8rem 0 1.2rem 0;
-        margin: 0 1.5rem;
-      }
-    }
-
-    &--links:hover {
-      border-bottom: 0.1875rem solid $white;
-      font-weight: 600;
-    }
-
-    &--links:active {
-      border-bottom: 0.1875rem solid $white;
+  &__link {
+    text-decoration: none;
+    color: $white;
+    text-align: center;
+    padding: 0.5rem 0 0.5rem 0;
+    @include tablet-desktop {
+      align-items: center;
+      padding: 1.8rem 0 1.2rem 0;
+      margin: 0 1.5rem;
     }
   }
 
-  &__description {
-    padding: 0 1rem;
+  &__link:hover {
+    border-bottom: 0.1875rem solid $white;
+    font-weight: 600;
+  }
+
+  &__link:active {
+    border-bottom: 0.1875rem solid $white;
   }
 }
 

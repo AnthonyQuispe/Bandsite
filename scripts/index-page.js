@@ -1,4 +1,9 @@
-let comment = [
+const commentSection = document.querySelector(".comment");
+const commentBottom = document.createElement("div");
+commentBottom.classList.add("comment__bottom");
+commentSection.appendChild(commentBottom);
+
+const comments = [
   {
     name: "Connor Walton",
     timestamp: "02/17/2021",
@@ -16,25 +21,91 @@ let comment = [
   },
 ];
 
-function displayComment(comments) {
-  // Created a variable which .comment_bottom
-  const commentBottom = document.querySelector(".comment__bottom");
+function updateComment(comment) {
+  //Comment Container
+  const commentContainer = document.createElement("div");
+  commentContainer.classList.add("comment__container");
 
-  // Comment Bottom Div
-  const commentBottomDiv = document.createElement("div");
-  commentBottomDiv.classList.add("comment__bottom--comments");
+  //Divider
+  const divider = document.createElement("hr");
+  divider.classList.add("divider");
+  commentContainer.appendChild(divider);
 
-  // Comment Bottom Div Left
-  const commentBottomLeft = document.createElement("div");
-  commentBottomLeft.classList.add("comment__bottom--left");
+  const commentContainerInfo = document.createElement("div");
+  commentContainerInfo.classList.add("comment__container--info");
+  commentContainer.appendChild(commentContainerInfo);
 
-  const avatar = document.createElement("img");
-  avatars.classList.add("comment__avatar");
+  const commentContainerLeft = document.createElement("div");
+  commentContainerLeft.classList.add("comment__container--left");
+  commentContainerInfo.appendChild(commentContainerLeft);
+
+  const avatars = document.createElement("img");
+  avatars.className = "avatars";
   avatars.setAttribute("src", "/assets/images/Mohan-muruge.jpg");
+  commentContainerLeft.appendChild(avatars);
 
-  // Comment Bottom Div Right
-  const commentBottomRight = document.createElement("div");
-  commentBottomRight.classList.add("comment__bottom--right");
+  //Comment Container top
+  const commentContainerTop = document.createElement("div");
+  commentContainerTop.classList.add("comment__container--top");
+  commentContainerInfo.appendChild(commentContainerTop);
 
-  commentBottom.appendChild(commenBottomDiv);
+  //Comment Container top text
+  const commentContainerTopText = document.createElement("div");
+  commentContainerTopText.classList.add("comment__container--top--text");
+  commentContainerTop.appendChild(commentContainerTopText);
+
+  const name = document.createElement("p");
+  name.innerText = comment.name;
+  name.classList.add("comment__container--name");
+  commentContainerTopText.appendChild(name);
+
+  const time = document.createElement("p");
+  time.innerText = comment.timestamp;
+  time.classList.add("comment__container--time");
+  commentContainerTopText.appendChild(time);
+
+  //Comment Container Bottom
+  const commentContainerBottom = document.createElement("div");
+  commentContainerBottom.classList.add("comment__container--bottom");
+  commentContainerTop.appendChild(commentContainerBottom);
+
+  const text = document.createElement("p");
+  text.innerText = comment.text;
+  text.classList.add("comment__container--text");
+  commentContainerBottom.appendChild(text);
+
+  return commentContainer;
 }
+
+function renderComment() {
+  const mycommentsEl = document.querySelector(".comment__bottom");
+
+  // Clear the appointments div first
+  mycommentsEl.innerHTML = "";
+  // commentContainer.innerHTML = "";
+
+  comments.forEach((comment) => {
+    const newComment = updateComment(comment);
+    mycommentsEl.appendChild(newComment);
+  });
+}
+
+function commentFormSubmit(event) {
+  event.preventDefault();
+  console.log(event.target.name.value);
+  console.log(event.target.text.value);
+
+  const commentData = {
+    name: event.target.name.value,
+    text: event.target.text.value,
+    timestamp: new Date().toLocaleDateString(),
+  };
+
+  comments.push(commentData);
+  renderComment();
+}
+
+// Create a variable for Comment Form class
+const commentForm = document.querySelector("#comment-form");
+commentForm.addEventListener("submit", commentFormSubmit);
+renderComment();

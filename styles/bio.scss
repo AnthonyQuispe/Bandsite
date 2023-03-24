@@ -34,7 +34,7 @@
       min-height: 55vw;
     }
   }
-  &__title {
+  &__heading {
     padding: 0 16px;
     z-index: 1;
     font-weight: 500;
@@ -80,7 +80,7 @@
       }
     }
   }
-  &__title {
+  &__heading {
     padding: 1.5rem 1rem 1rem 1rem;
     font-weight: 600;
 
@@ -89,32 +89,6 @@
     }
   }
 
-  &__quote {
-    padding: 0 1rem 0.5rem 1rem;
-    font-weight: 550;
-    width: 83%;
-
-    @include tablet-desktop {
-      padding: 0 0rem 0.5rem 5.625rem;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-weight: 600;
-      width: 82%;
-    }
-    @include desktop {
-      width: 80%;
-    }
-  }
-  &__arthur {
-    padding: 0 1rem 0.5rem 1rem;
-    font-weight: 550;
-    width: 83%;
-    @include tablet-desktop {
-      padding: 0 0 0.5rem 5.625rem;
-      font-size: 15px;
-      width: unset;
-    }
-  }
   &__text {
     padding: 0.5rem 1rem;
     @include tablet-desktop {
@@ -126,17 +100,45 @@
       width: 100%;
       padding: 0.5rem;
     }
-  }
-  &__bottom {
-    display: flex;
-    flex-direction: column;
-    @include tablet-desktop {
-      flex-direction: row;
-      padding: 1.5rem 5.625rem;
-      justify-content: space-around;
+
+    &--quote {
+      padding: 0 1rem 0.5rem 1rem;
+      font-weight: 550;
+      width: 83%;
+
+      @include tablet-desktop {
+        padding: 0 0rem 0.5rem 5.625rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+        width: 82%;
+      }
+      @include desktop {
+        width: 80%;
+      }
+    }
+    &--arthur {
+      padding: 0 1rem 0.5rem 1rem;
+      font-weight: 550;
+      width: 83%;
+      @include tablet-desktop {
+        padding: 0 0 0.5rem 5.625rem;
+        font-size: 15px;
+        width: unset;
+      }
+    }
+    &--container {
+      display: flex;
+      flex-direction: column;
+      @include tablet-desktop {
+        flex-direction: row;
+        padding: 1.5rem 5.625rem;
+        justify-content: space-around;
+      }
     }
   }
-  &__subheading {
+
+  &__subhead {
     padding: 1rem 1rem 0.5rem 1rem;
     font-weight: 500;
     @include tablet-desktop {
@@ -169,7 +171,7 @@
     }
   }
 
-  &__item-img {
+  &__image {
     width: 100%;
     height: 55vw;
     margin: 4px 0;
@@ -196,47 +198,68 @@
     }
   }
 }
-
+//Comment Section
 .comment {
   display: flex;
   flex-direction: column;
   padding: 16px;
 
-  &__top {
+  &__form--container {
     display: flex;
-
-    &--name {
-      width: 100%;
-      min-height: 36px;
-      padding: 12px;
-      display: inline-block;
-      border: 1px solid $mercury;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    &--comment {
-      width: 100%;
-      min-height: 85px;
-      padding: 12px;
-      display: inline-block;
-      border: 1px solid $mercury;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    &--button {
-      width: 100%;
-      height: 40px;
-      border-radius: 4px;
-      color: $white;
-      background-color: $bandsite-black;
-      font-size: 0.625rem;
-      line-height: 1.25rem;
-      font-weight: 700;
+  }
+  &__input--container {
+    padding: 12px;
+  }
+  //The form fields will have a 1px border using the color
+  // Mercury for the default state, BandSite-Black for the
+  // active state, and #D22D2D for the error state.
+  &__label--name {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 36px;
+    padding: 12px;
+    border: 1px solid $mercury;
+    border-radius: 4px;
+    box-sizing: border-box;
+    @mixin tablet-desktop {
+      min-height: 48px;
+      padding: 16px;
     }
   }
-  &__right {
+
+  &__label--comment {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 36px;
     padding: 12px;
+    border: 1px solid $mercury;
+    border-radius: 4px;
+    box-sizing: border-box;
+    @mixin tablet-desktop {
+      min-height: 48px;
+      padding: 16px;
+    }
+  }
+  &__button {
+    width: 100%;
+    max-height: 40px;
+    border-radius: 4px;
+    color: $white;
+    background-color: $bandsite-black;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+
+    @mixin tablet-desktop {
+      width: 9.375rem;
+      padding: 0 2rem;
+    }
+  }
+
+  &__button:hover {
+    background-color: $bandsite-darkblack;
   }
 }
 
@@ -246,9 +269,47 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: left;
+
+  @mixin tablet-desktop {
+    height: 48px;
+    width: 48px;
+  }
 }
 
 .divider {
   stroke-width: 1px;
   background-color: $mercury;
+  padding: 0 12px;
+}
+
+.comment__avatar {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.comment__container--top {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment__container--top--text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment__container--info {
+  display: flex;
+}
+
+.comment__container--time {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.comment__container--top {
+  padding: 0 12px;
 }

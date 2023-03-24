@@ -121,37 +121,34 @@ body {
     padding: 2rem 1.5rem 1.5rem 2.5em;
   }
 }
-.nav__bar {
+.nav__links {
   display: flex;
   justify-content: space-around;
 }
 @media screen and (min-width: 768px) {
-  .nav__bar {
+  .nav__links {
     align-items: center;
   }
 }
-.nav__bar--links {
+.nav__link {
   text-decoration: none;
   color: #ffffff;
   text-align: center;
   padding: 0.5rem 0 0.5rem 0;
 }
 @media screen and (min-width: 768px) {
-  .nav__bar--links {
+  .nav__link {
     align-items: center;
     padding: 1.8rem 0 1.2rem 0;
     margin: 0 1.5rem;
   }
 }
-.nav__bar--links:hover {
+.nav__link:hover {
   border-bottom: 0.1875rem solid #ffffff;
   font-weight: 600;
 }
-.nav__bar--links:active {
+.nav__link:active {
   border-bottom: 0.1875rem solid #ffffff;
-}
-.nav__description {
-  padding: 0 1rem;
 }
 
 .footer {
