@@ -156,10 +156,10 @@
   background-color: $alabaster;
   padding: 1rem 1rem 0.5rem 1rem;
   @include tablet-desktop {
-    padding: 1.5rem 1rem 0 1rem;
+    padding: 1.5rem 1rem 0.5rem 1rem;
   }
   @include desktop {
-    padding: 1.5rem 4rem 0 4rem;
+    padding: 1.5rem 4rem 0.5rem 4rem;
   }
 
   &__items {
@@ -198,26 +198,38 @@
     }
   }
 }
-//Comment Section
+
+//Comment Section Form Fields
 .comment {
   display: flex;
   flex-direction: column;
   padding: 16px;
 
+  @include tablet-desktop {
+    padding: 16px 48px 24px 48px;
+  }
+
   &__form--container {
     display: flex;
+
+    @include tablet-desktop {
+      padding: 0px 39px;
+    }
+
+    @include tablet-desktop {
+      padding: 0 32px;
+    }
   }
 
   &__label--name {
     display: flex;
     flex-direction: column;
     color: $silver;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
 
     margin: 0 0 10px 0;
     @include tablet-desktop {
-      min-height: 48px;
       padding: 16px;
     }
   }
@@ -231,16 +243,25 @@
     font-weight: 500;
     @include tablet-desktop {
       min-height: 48px;
-      padding: 16px;
+      padding: 0 16px;
     }
   }
+
+  &__input--name {
+    border: 1px solid $mercury;
+    padding: 12px;
+    border-radius: 4px;
+    border-color: #e1e1e1;
+    background-color: #fafafa;
+  }
+  // Comment Button
   &__button {
     width: 100%;
     max-height: 40px;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     color: $white;
     background-color: $bandsite-black;
-    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 0.25rem;
     font-weight: 400;
     padding: 1rem;
@@ -248,12 +269,18 @@
 
     @include tablet-desktop {
       width: 9.375rem;
-      padding: 0 2rem;
     }
   }
 
   &__button:hover {
     background-color: $bandsite-darkblack;
+  }
+  &__button--container {
+    @include tablet-desktop {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 16px 0 0;
+    }
   }
 }
 
@@ -268,6 +295,7 @@
   @include tablet-desktop {
     height: 48px;
     width: 48px;
+    margin: 26px 8px 0 0;
   }
 }
 
@@ -307,19 +335,11 @@
   border: 1px solid $mercury;
   font-size: 14px;
   padding-left: 8px;
+  padding: 12px 0 44px 14px;
   border-radius: 4px;
   border-color: #e1e1e1;
   background-color: #fafafa;
   resize: none;
-}
-
-.comment__input--name {
-  min-height: 36px;
-  border: 1px solid $mercury;
-  padding-left: 8px;
-  border-radius: 4px;
-  border-color: #e1e1e1;
-  background-color: #fafafa;
 }
 
 .comment__container--name {
@@ -328,9 +348,13 @@
 }
 
 .comment__container--text {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   padding: 8px 0;
+
+  @include tablet-desktop {
+    font-size: 14px;
+  }
 }
 .comment__container--time {
   padding: 16px 0 0 0;
@@ -339,6 +363,9 @@
 .comment__heading {
   font-weight: 600;
   margin: 16px 0;
+  @include tablet-desktop {
+    font-size: 32px;
+  }
 }
 
 .comment__avatars {
@@ -353,5 +380,19 @@
   @include tablet-desktop {
     height: 48px;
     width: 48px;
+  }
+}
+
+.comment__bottom {
+  @include tablet-desktop {
+    padding: 0px 41px;
+  }
+}
+.comment__container {
+  border-bottom: $mercury solid 1px;
+  border-top: $mercury solid 1px;
+  stroke-width: 1px;
+  @include tablet-desktop {
+    padding: 16px 0;
   }
 }

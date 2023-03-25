@@ -17,7 +17,7 @@ const comments = [
   {
     name: "Miles Acosta",
     timestamp: "12/20/2020",
-    text: "I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough.",
+    text: "I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
   },
 ];
 
@@ -25,11 +25,6 @@ function updateComment(comment) {
   //Comment Container
   const commentContainer = document.createElement("div");
   commentContainer.classList.add("comment__container");
-
-  //Divider
-  const divider = document.createElement("hr");
-  divider.classList.add("divider");
-  commentContainer.appendChild(divider);
 
   const commentContainerInfo = document.createElement("div");
   commentContainerInfo.classList.add("comment__container--info");
