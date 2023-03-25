@@ -35,21 +35,21 @@ function updateComment(comment) {
   commentContainerInfo.classList.add("comment__container--info");
   commentContainer.appendChild(commentContainerInfo);
 
-  const commentContainerLeft = document.createElement("div");
-  commentContainerLeft.classList.add("comment__container--left");
-  commentContainerInfo.appendChild(commentContainerLeft);
-
+  //Avatar Container
+  const commentAvatarContainer = document.createElement("div");
+  commentAvatarContainer.classList.add("comment__container--left");
+  commentContainerInfo.appendChild(commentAvatarContainer);
+  //Avatar
   const avatars = document.createElement("img");
-  avatars.className = "avatars";
-  avatars.setAttribute("src", "/assets/images/Mohan-muruge.jpg");
-  commentContainerLeft.appendChild(avatars);
+  avatars.className = "comment__avatars";
+  commentAvatarContainer.appendChild(avatars);
 
-  //Comment Container top
+  //Comment text Container
   const commentContainerTop = document.createElement("div");
   commentContainerTop.classList.add("comment__container--top");
   commentContainerInfo.appendChild(commentContainerTop);
 
-  //Comment Container top text
+  //Comment name Container
   const commentContainerTopText = document.createElement("div");
   commentContainerTopText.classList.add("comment__container--top--text");
   commentContainerTop.appendChild(commentContainerTopText);
@@ -80,9 +80,8 @@ function updateComment(comment) {
 function renderComment() {
   const mycommentsEl = document.querySelector(".comment__bottom");
 
-  // Clear the appointments div first
+  // Clear the old comments so it does not run when there is a new comment
   mycommentsEl.innerHTML = "";
-  // commentContainer.innerHTML = "";
 
   comments.forEach((comment) => {
     const newComment = updateComment(comment);
@@ -101,7 +100,7 @@ function commentFormSubmit(event) {
     timestamp: new Date().toLocaleDateString(),
   };
 
-  comments.push(commentData);
+  comments.unshift(commentData);
   renderComment();
 }
 

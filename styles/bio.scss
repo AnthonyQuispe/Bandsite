@@ -207,22 +207,16 @@
   &__form--container {
     display: flex;
   }
-  &__input--container {
-    padding: 12px;
-  }
-  //The form fields will have a 1px border using the color
-  // Mercury for the default state, BandSite-Black for the
-  // active state, and #D22D2D for the error state.
+
   &__label--name {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    min-height: 36px;
-    padding: 12px;
-    border: 1px solid $mercury;
-    border-radius: 4px;
-    box-sizing: border-box;
-    @mixin tablet-desktop {
+    color: $silver;
+    font-size: 12px;
+    font-weight: 500;
+
+    margin: 0 0 10px 0;
+    @include tablet-desktop {
       min-height: 48px;
       padding: 16px;
     }
@@ -231,13 +225,11 @@
   &__label--comment {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    min-height: 36px;
-    padding: 12px;
-    border: 1px solid $mercury;
-    border-radius: 4px;
-    box-sizing: border-box;
-    @mixin tablet-desktop {
+    margin: 0 0 16px 0;
+    color: $silver;
+    font-size: 12px;
+    font-weight: 500;
+    @include tablet-desktop {
       min-height: 48px;
       padding: 16px;
     }
@@ -248,11 +240,13 @@
     border-radius: 4px;
     color: $white;
     background-color: $bandsite-black;
-    font-size: 0.625rem;
-    line-height: 1.25rem;
-    font-weight: 700;
+    font-size: 15px;
+    line-height: 0.25rem;
+    font-weight: 400;
+    padding: 1rem;
+    margin: 0 0 16px 0;
 
-    @mixin tablet-desktop {
+    @include tablet-desktop {
       width: 9.375rem;
       padding: 0 2rem;
     }
@@ -269,8 +263,9 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: left;
+  margin: 16px 8px 0 0;
 
-  @mixin tablet-desktop {
+  @include tablet-desktop {
     height: 48px;
     width: 48px;
   }
@@ -280,14 +275,6 @@
   stroke-width: 1px;
   background-color: $mercury;
   padding: 0 12px;
-}
-
-.comment__avatar {
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: left;
 }
 
 .comment__container--top {
@@ -308,8 +295,63 @@
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+  color: $silver;
 }
 
-.comment__container--top {
-  padding: 0 12px;
+.comment__input--container {
+  width: 100%;
+}
+
+.comment__input--comment {
+  padding-bottom: 50px;
+  border: 1px solid $mercury;
+  font-size: 14px;
+  padding-left: 8px;
+  border-radius: 4px;
+  border-color: #e1e1e1;
+  background-color: #fafafa;
+  resize: none;
+}
+
+.comment__input--name {
+  min-height: 36px;
+  border: 1px solid $mercury;
+  padding-left: 8px;
+  border-radius: 4px;
+  border-color: #e1e1e1;
+  background-color: #fafafa;
+}
+
+.comment__container--name {
+  font-weight: 500;
+  padding: 16px 0 0 0;
+}
+
+.comment__container--text {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 0;
+}
+.comment__container--time {
+  padding: 16px 0 0 0;
+}
+
+.comment__heading {
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+.comment__avatars {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: left;
+  background-color: #e1e1e1;
+  margin: 16px 8px 0 0;
+
+  @include tablet-desktop {
+    height: 48px;
+    width: 48px;
+  }
 }
