@@ -86,6 +86,12 @@ function updateShows(shows) {
   showsDateContainers.classList.add("shows__date--container");
   showsContainers.appendChild(showsDateContainers);
 
+  //shows Date Label
+  const dateLabel = document.createElement("p");
+  dateLabel.innerText = "Date:";
+  dateLabel.classList.add("shows__label");
+  showsDateContainers.appendChild(dateLabel);
+
   //shows Date
   const date = document.createElement("p");
   date.innerText = shows.date;
@@ -97,6 +103,12 @@ function updateShows(shows) {
   showsVenueContainers.classList.add("shows__Venue--container");
   showsContainers.appendChild(showsVenueContainers);
 
+  //shows Venue Label
+  const venueLabel = document.createElement("p");
+  venueLabel.innerText = "Venue:";
+  venueLabel.classList.add("shows__label");
+  showsVenueContainers.appendChild(venueLabel);
+
   //shows Venue
   const venue = document.createElement("p");
   venue.innerText = shows.venue;
@@ -107,6 +119,12 @@ function updateShows(shows) {
   const showsLocationContainers = document.createElement("div");
   showsLocationContainers.classList.add("shows__Venue--container");
   showsContainers.appendChild(showsLocationContainers);
+
+  //shows location Label
+  const locationLabel = document.createElement("p");
+  locationLabel.innerText = "Location:";
+  locationLabel.classList.add("shows__label");
+  showsLocationContainers.appendChild(locationLabel);
 
   //Location Venue
   const location = document.createElement("p");

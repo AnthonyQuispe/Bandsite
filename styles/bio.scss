@@ -216,8 +216,8 @@
       padding: 0px 39px;
     }
 
-    @include tablet-desktop {
-      padding: 0 32px;
+    @include desktop {
+      padding: 0 220px;
     }
   }
 
@@ -232,6 +232,10 @@
     @include tablet-desktop {
       padding: 16px;
     }
+
+    @include desktop {
+      padding: 16px 16px 16px 14px;
+    }
   }
 
   &__label--comment {
@@ -244,6 +248,9 @@
     @include tablet-desktop {
       min-height: 48px;
       padding: 0 16px;
+    }
+    @include desktop {
+      padding: 16px 16px 16px 14px;
     }
   }
 
@@ -282,64 +289,41 @@
       margin: 0 16px 0 0;
     }
   }
-}
 
-.avatars {
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: left;
-  margin: 16px 8px 0 0;
+  &__container--top {
+    display: flex;
+    flex-direction: column;
 
-  @include tablet-desktop {
-    height: 48px;
-    width: 48px;
-    margin: 26px 8px 0 0;
+    &--text {
+      display: flex;
+      justify-content: space-between;
+    }
   }
-}
 
-.divider {
-  stroke-width: 1px;
-  background-color: $mercury;
-  padding: 0 12px;
-}
+  &__container--info {
+    display: flex;
+  }
+  &__container--time {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $silver;
+  }
+  &__input--container {
+    width: 100%;
+  }
 
-.comment__container--top {
-  display: flex;
-  flex-direction: column;
-}
-
-.comment__container--top--text {
-  display: flex;
-  justify-content: space-between;
-}
-
-.comment__container--info {
-  display: flex;
-}
-
-.comment__container--time {
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 400;
-  color: $silver;
-}
-
-.comment__input--container {
-  width: 100%;
-}
-
-.comment__input--comment {
-  padding-bottom: 50px;
-  border: 1px solid $mercury;
-  font-size: 14px;
-  padding-left: 8px;
-  padding: 12px 0 44px 14px;
-  border-radius: 4px;
-  border-color: #e1e1e1;
-  background-color: #fafafa;
-  resize: none;
+  &__input--comment {
+    padding-bottom: 50px;
+    border: 1px solid $mercury;
+    font-size: 14px;
+    padding-left: 8px;
+    padding: 12px 0 44px 14px;
+    border-radius: 4px;
+    border-color: #e1e1e1;
+    background-color: #fafafa;
+    resize: none;
+  }
 }
 
 .comment__container--name {
@@ -366,6 +350,9 @@
   @include tablet-desktop {
     font-size: 32px;
   }
+  @include desktop {
+    padding: 0px 0 0 24px;
+  }
 }
 
 .comment__avatars {
@@ -387,6 +374,9 @@
   @include tablet-desktop {
     padding: 0px 41px;
   }
+  @include desktop {
+    padding: 0 220px;
+  }
 }
 .comment__container {
   border-bottom: $mercury solid 1px;
@@ -395,4 +385,30 @@
   @include tablet-desktop {
     padding: 16px 0;
   }
+}
+
+.avatars {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: left;
+  margin: 16px 8px 0 0;
+
+  @include tablet-desktop {
+    height: 48px;
+    width: 48px;
+    margin: 26px 8px 0 0;
+  }
+  @include desktop {
+    height: 48px;
+    width: 48px;
+    margin: 26px 0 0 0;
+  }
+}
+
+.divider {
+  stroke-width: 1px;
+  background-color: $mercury;
+  padding: 0 12px;
 }

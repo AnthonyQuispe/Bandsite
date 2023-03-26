@@ -561,9 +561,9 @@ body {
     padding: 0px 39px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .comment__form--container {
-    padding: 0 32px;
+    padding: 0 220px;
   }
 }
 .comment__label--name {
@@ -579,6 +579,11 @@ body {
     padding: 16px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .comment__label--name {
+    padding: 16px 16px 16px 14px;
+  }
+}
 .comment__label--comment {
   display: flex;
   flex-direction: column;
@@ -591,6 +596,11 @@ body {
   .comment__label--comment {
     min-height: 48px;
     padding: 0 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .comment__label--comment {
+    padding: 16px 16px 16px 14px;
   }
 }
 .comment__input--name {
@@ -627,56 +637,26 @@ body {
     margin: 0 16px 0 0;
   }
 }
-
-.avatars {
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: left;
-     object-position: left;
-  margin: 16px 8px 0 0;
-}
-@media screen and (min-width: 768px) {
-  .avatars {
-    height: 48px;
-    width: 48px;
-    margin: 26px 8px 0 0;
-  }
-}
-
-.divider {
-  stroke-width: 1px;
-  background-color: #e1e1e1;
-  padding: 0 12px;
-}
-
 .comment__container--top {
   display: flex;
   flex-direction: column;
 }
-
 .comment__container--top--text {
   display: flex;
   justify-content: space-between;
 }
-
 .comment__container--info {
   display: flex;
 }
-
 .comment__container--time {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
   color: #afafaf;
 }
-
 .comment__input--container {
   width: 100%;
 }
-
 .comment__input--comment {
   padding-bottom: 50px;
   border: 1px solid #e1e1e1;
@@ -718,6 +698,11 @@ body {
     font-size: 32px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .comment__heading {
+    padding: 0px 0 0 24px;
+  }
+}
 
 .comment__avatars {
   height: 36px;
@@ -742,6 +727,11 @@ body {
     padding: 0px 41px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .comment__bottom {
+    padding: 0 220px;
+  }
+}
 
 .comment__container {
   border-bottom: #e1e1e1 solid 1px;
@@ -752,4 +742,35 @@ body {
   .comment__container {
     padding: 16px 0;
   }
+}
+
+.avatars {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+  margin: 16px 8px 0 0;
+}
+@media screen and (min-width: 768px) {
+  .avatars {
+    height: 48px;
+    width: 48px;
+    margin: 26px 8px 0 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .avatars {
+    height: 48px;
+    width: 48px;
+    margin: 26px 0 0 0;
+  }
+}
+
+.divider {
+  stroke-width: 1px;
+  background-color: #e1e1e1;
+  padding: 0 12px;
 }/*# sourceMappingURL=bio.css.map */
