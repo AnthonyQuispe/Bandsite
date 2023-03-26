@@ -668,27 +668,22 @@ body {
   background-color: #fafafa;
   resize: none;
 }
-
 .comment__container--name {
   font-weight: 500;
   padding: 16px 0 0 0;
 }
-
-.comment__container--text {
-  font-size: 13px;
-  font-weight: 400;
-  padding: 8px 0;
+.comment__container--name {
+  font-weight: 500;
+  padding: 16px 0 0 0;
 }
 @media screen and (min-width: 768px) {
-  .comment__container--text {
+  .comment__container--name {
     font-size: 14px;
   }
 }
-
 .comment__container--time {
   padding: 16px 0 0 0;
 }
-
 .comment__heading {
   font-weight: 600;
   margin: 16px 0;
@@ -703,7 +698,6 @@ body {
     padding: 0px 0 0 24px;
   }
 }
-
 .comment__avatars {
   height: 36px;
   width: 36px;
@@ -721,7 +715,6 @@ body {
     width: 48px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .comment__bottom {
     padding: 0px 41px;
@@ -732,7 +725,6 @@ body {
     padding: 0 220px;
   }
 }
-
 .comment__container {
   border-bottom: #e1e1e1 solid 1px;
   border-top: #e1e1e1 solid 1px;

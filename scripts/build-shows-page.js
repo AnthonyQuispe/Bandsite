@@ -1,34 +1,23 @@
 // Created new Hero Section
-const heroSection = document.createElement("section");
-heroSection.className = "hero";
+const heroSection = document.querySelector(".hero");
 
-//Border Hero Div
-const heroBorder = document.createElement("div");
-heroBorder.className = "hero__border";
-heroSection.appendChild(heroBorder);
+//Hero Frame Div
+const heroFrameBorder = document.createElement("div");
+heroFrameBorder.className = "hero__border--frame";
+heroSection.appendChild(heroFrameBorder);
 
-const heroAlbum = document.createElement("h3");
-heroAlbum.className = "hero__album";
-heroAlbum.textContent = "Beautiful Beast Album";
-heroSection.appendChild(heroAlbum);
-
-const heroTitle = document.createElement("h2");
-heroTitle.className = "hero__title";
-heroTitle.textContent = "Queen of Yellow x For The Stings";
-heroSection.appendChild(heroTitle);
-
+//Hero Frame
 const heroFrame = document.createElement("iframe");
 heroFrame.className = "hero__frame";
 heroFrame.src =
   "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/766650868&color=%23302629&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true";
 heroFrame.allow = "autoplay";
+heroFrame.setAttribute("frameborder", "0");
+
 // heroFrame.frameborder = "no";
-heroSection.appendChild(heroFrame);
+heroFrameBorder.appendChild(heroFrame);
 
 //Insert Sections after Nav Section
-document
-  .querySelector(".header")
-  .insertAdjacentElement("afterend", heroSection);
 
 // Created new Hero Section
 const showsSection = document.createElement("section");
@@ -38,7 +27,7 @@ showsSection.className = "shows";
 document.querySelector(".hero").insertAdjacentElement("afterend", showsSection);
 
 const showsTitle = document.createElement("h2");
-showsTitle.className = "shows__Title";
+showsTitle.classList.add("shows__title", "section-header");
 showsTitle.textContent = "Shows";
 showsSection.appendChild(showsTitle);
 
@@ -88,7 +77,7 @@ function updateShows(shows) {
 
   //shows Date Label
   const dateLabel = document.createElement("p");
-  dateLabel.innerText = "Date:";
+  dateLabel.innerText = "Date";
   dateLabel.classList.add("shows__label");
   showsDateContainers.appendChild(dateLabel);
 
@@ -100,12 +89,12 @@ function updateShows(shows) {
 
   //shows venueContainer
   const showsVenueContainers = document.createElement("div");
-  showsVenueContainers.classList.add("shows__Venue--container");
+  showsVenueContainers.classList.add("shows__venue--container");
   showsContainers.appendChild(showsVenueContainers);
 
   //shows Venue Label
   const venueLabel = document.createElement("p");
-  venueLabel.innerText = "Venue:";
+  venueLabel.innerText = "Venue";
   venueLabel.classList.add("shows__label");
   showsVenueContainers.appendChild(venueLabel);
 
@@ -117,12 +106,12 @@ function updateShows(shows) {
 
   //location venueContainer
   const showsLocationContainers = document.createElement("div");
-  showsLocationContainers.classList.add("shows__Venue--container");
+  showsLocationContainers.classList.add("shows__location--container");
   showsContainers.appendChild(showsLocationContainers);
 
   //shows location Label
   const locationLabel = document.createElement("p");
-  locationLabel.innerText = "Location:";
+  locationLabel.innerText = "Location";
   locationLabel.classList.add("shows__label");
   showsLocationContainers.appendChild(locationLabel);
 
@@ -143,7 +132,7 @@ function updateShows(shows) {
   button.type = "submit";
   button.value = "submit";
   button.innerText = "Buy Ticket";
-  showsContainers.appendChild(button);
+  showsButtonContainers.appendChild(button);
 
   //Divider
   const divider = document.createElement("hr");

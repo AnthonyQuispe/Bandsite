@@ -1,6 +1,7 @@
 @use "partials/globals" as *;
 @use "partials/mixins" as *;
 @use "partials/variables" as *;
+@use "partials/typography" as *;
 
 .hero {
   display: flex;
@@ -8,7 +9,7 @@
   background-image: url("/assets/images/hero-shows.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 60vw;
+  min-height: 90vw;
   position: relative;
 
   @include tablet-desktop {
@@ -23,7 +24,7 @@
   &__border {
     position: absolute;
     width: 100%;
-    min-height: 60vw;
+    min-height: 90vw;
     background-color: $bandsite-black;
     opacity: 0.5;
     @include tablet-desktop {
@@ -33,30 +34,82 @@
     @include desktop {
       min-height: 55vw;
     }
+
+    &--text {
+      padding: 19px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 84%;
+    }
+
+    &--frame {
+      display: flex;
+      justify-content: center;
+      height: 120px;
+    }
   }
   &__album {
     z-index: 1;
-    font-weight: 500;
     color: white;
-    padding: 32px 16px;
-    @include tablet-desktop {
-      padding: 16px 2.25rem;
-    }
+    font-weight: 25rem;
+    font-size: 0.875rem;
+    padding: 0.75rem 0 0 0;
   }
   &__title {
     z-index: 1;
     font-weight: 500;
     color: white;
-    @include tablet-desktop {
-      padding: 0 2.25rem;
-    }
+    padding: 1.25rem 0 0 0;
+    width: 84%;
   }
   &__frame {
     z-index: 1;
     font-weight: 500;
     color: white;
+    text-align: center;
+    height: 34vw;
+    width: 42vh;
     @include tablet-desktop {
       padding: 0 2.25rem;
     }
   }
+}
+
+.shows__title {
+  padding: 0 16px;
+  font-weight: 600;
+}
+
+.shows__location--container,
+.shows__venue--container,
+.shows__date--container {
+  padding: 8px 16px;
+}
+
+.shows__label {
+  color: $silver;
+}
+
+.shows__date {
+  font-weight: 500;
+}
+
+.shows__button {
+  width: 100%;
+  max-height: 40px;
+  border-radius: 0.25rem;
+  color: $white;
+  background-color: $bandsite-black;
+  font-size: 1.125rem;
+  line-height: 0.25rem;
+  font-weight: 500;
+  padding: 1rem;
+  margin: 0 0 16px 0;
+}
+
+.shows__button--container {
+  width: 90%;
+  padding: 0 15px 0;
 }
