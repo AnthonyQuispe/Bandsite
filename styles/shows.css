@@ -405,6 +405,11 @@ body {
     padding: 1rem 0 0 0;
   }
 }
+@media screen and (min-width: 1024px) {
+  .hero__title {
+    width: 100%;
+  }
+}
 .hero__frame {
   z-index: 1;
   font-weight: 500;
@@ -425,6 +430,7 @@ body {
   .hero__frame {
     height: 11vw;
     width: 40vw;
+    margin-top: 5vh;
   }
 }
 

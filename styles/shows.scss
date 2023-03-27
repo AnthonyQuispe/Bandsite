@@ -84,6 +84,9 @@
       font-weight: 500;
       padding: 1rem 0 0 0;
     }
+    @include desktop {
+      width: 100%;
+    }
   }
   &__frame {
     z-index: 1;
@@ -93,6 +96,7 @@
     height: 34vw;
     width: 89vw;
     border: none;
+
     @include tablet-desktop {
       padding: 1.25rem 2.25rem;
       height: 21vw;
@@ -101,6 +105,7 @@
     @include desktop {
       height: 11vw;
       width: 40vw;
+      margin-top: 5vh;
     }
   }
 }
