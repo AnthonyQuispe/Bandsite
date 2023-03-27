@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BandSite</title>
+    <title>BandSite Biography</title>
     <link rel="stylesheet" href="./styles/bio.css" />
   </head>
   <body>
@@ -13,25 +13,22 @@
       <!-- Nav Section -->
       <nav class="nav">
         <a href="/index.html" class="nav__logo"
-          ><img
-            class="nav__logo"
-            src="./assets/logos/Logo-bandsite.svg"
-            alt="Bandsite Logo"
+          ><img src="./assets/logos/Logo-bandsite.svg" alt="Bandsite Logo"
         /></a>
-        <div class="nav__bar">
-          <a href="#" class="nav__bar--links body-copy">Biography</a>
-          <a href="#" class="nav__bar--links body-copy">Shows</a>
+        <div class="nav__links">
+          <a href="/index.html" class="nav__link body-copy">Biography</a>
+          <a href="/pages/shows.html" class="nav__link body-copy">Shows</a>
         </div>
       </nav>
       <!-- Hero Section -->
       <section class="hero">
         <div class="hero__border"></div>
-        <h1 class="hero__title page-header">The Bees Knees</h1>
+        <h1 class="hero__heading page-header">The Bees Knees</h1>
       </section>
     </header>
     <!-- Headlines Section -->
     <article class="headlines">
-      <h2 class="headlines__title section-header">About the Musicians</h2>
+      <h2 class="headlines__heading section-header">About the Musicians</h2>
       <div class="headlines__img--container">
         <img
           class="headlines__img"
@@ -40,15 +37,15 @@
         />
       </div>
       <div class="headlines__descriptions">
-        <p class="headlines__quote body-copy">
+        <p class="headlines__text--quote body-copy">
           "We push each other to be the best. It's not uncommon for one of us to
           say 'this needs to be better, back to the drawing board'"
         </p>
-        <p class="headlines__arthur body-copy">
+        <p class="headlines__text--arthur body-copy">
           - Bryan Teddy, lead vocalist of The Bees Knees
         </p>
-        <h4 class="headlines__subheading body-copy">The Bees Knees</h4>
-        <div class="headlines__bottom">
+        <h4 class="headlines__subhead body-copy">The Bees Knees</h4>
+        <div class="headlines__text--container">
           <p class="headlines__text body-copy">
             The Bees Knees is a pop rock band originating from San Francisco,
             California. The band consists of lead vocalist Bryan Teddy,
@@ -79,66 +76,102 @@
       <div class="gallery__items">
         <div class="gallery__item">
           <img
-            class="gallery__item-img"
+            class="gallery__image"
             src="./assets/images/Photo-gallery-1.jpg"
             alt="rave red and blue picture"
           />
         </div>
         <div class="gallery__item">
           <img
-            class="gallery__item-img"
+            class="gallery__image"
             src="./assets/images/Photo-gallery-2.jpg"
             alt="green and blue girl picture"
           />
         </div>
         <div class="gallery__item">
           <img
-            class="gallery__item-img"
+            class="gallery__image"
             src="./assets/images/Photo-gallery-3.jpg"
             alt="hands up in the air"
           />
         </div>
         <div class="gallery__item">
           <img
-            class="gallery__item-img"
+            class="gallery__image"
             src="./assets/images/Photo-gallery-4.jpg"
             alt="green and pink lights "
           />
         </div>
         <div class="gallery__item">
           <img
-            class="gallery__item-img"
+            class="gallery__image"
             src="./assets/images/Photo-gallery-5.jpg"
             alt="crazy red and blue slime"
           />
         </div>
         <div class="gallery__item">
           <img
-            class="gallery__item-img"
+            class="gallery__image"
             src="./assets/images/Photo-gallery-6.jpg"
             alt="singer"
           />
         </div>
         <div class="gallery__item">
           <img
-            class="gallery__item-img"
+            class="gallery__image"
             src="./assets/images/Photo-gallery-7.jpg"
             alt="neon rainbow color lights"
           />
         </div>
         <div class="gallery__item">
           <img
-            class="gallery__item-img"
+            class="gallery__image"
             src="./assets/images/Photo-gallery-8.jpg"
             alt="dj hand "
           />
         </div>
         <div class="gallery__item">
           <img
-            class="gallery__item-img"
+            class="gallery__image"
             src="./assets/images/Photo-gallery-9.jpg"
             alt="paper confeti"
           />
+        </div>
+      </div>
+    </section>
+    <section class="comment">
+      <h2 class="comment__heading">Join the Conversation</h2>
+      <div class="comment__form--container">
+        <div class="comment__image--container">
+          <img class="avatars" src="/assets/images/Mohan-muruge.jpg" />
+        </div>
+        <div class="comment__input--container">
+          <form id="comment-form" class="comment__form">
+            <label class="comment__label--name"
+              >NAME<input
+                class="comment__input--name"
+                name="name"
+                type="text"
+                placeholder="Enter your name"
+                required
+            /></label>
+            <label class="comment__label--comment"
+              >COMMENT
+              <textarea
+                class="comment__input--comment"
+                name="text"
+                placeholder="Add a new comment"
+                required
+              ></textarea>
+            </label>
+            <div class="comment__button--container">
+              <label>
+                <button class="comment__button" type="submit">
+                  COMMENT
+                </button></label
+              >
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -170,7 +203,7 @@
           alt="bandsite logo"
         />
       </div>
-      <section class="footer__info">
+      <div class="footer__info">
         <div class="footer__company">
           <p class="footer__company--title footer-copy">Cam Adams</p>
           <p class="footer__company--title footer-copy">
@@ -202,12 +235,13 @@
           <p class="footer__agent--address footer-copy">UK/EU/AU</p>
           <p class="footer__email footer-copy">cwhyte@archentertainment.com</p>
         </div>
-      </section>
+      </div>
 
       <img class="footer__logo" src="./assets/logos/Logo-bandsite.svg" />
       <p class="footer__copyright labelsbuttons">
         Copyright The Bees Knees © 2021 All Rights Reserved
       </p>
     </footer>
+    <script src="/scripts/index-page.js"></script>
   </body>
 </html>

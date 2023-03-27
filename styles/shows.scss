@@ -1,0 +1,220 @@
+@use "partials/globals" as *;
+@use "partials/mixins" as *;
+@use "partials/variables" as *;
+@use "partials/typography" as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  background-image: url("/assets/images/hero-shows.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90vw;
+  position: relative;
+
+  @include tablet-desktop {
+    height: 75vw;
+  }
+
+  @include desktop {
+    height: 63vw;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__border {
+    position: absolute;
+    width: 100%;
+    height: 90vw;
+    background-color: $bandsite-black;
+    opacity: 0.5;
+    @include tablet-desktop {
+      height: 75vw;
+      background-position: bottom;
+    }
+    @include desktop {
+      height: 63vw;
+    }
+
+    &--text {
+      padding: 1.1875rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 84%;
+
+      @include tablet-desktop {
+        padding: 1.1875rem 2.5rem;
+      }
+    }
+
+    &--frame {
+      display: flex;
+      justify-content: center;
+
+      @include tablet-desktop {
+        justify-content: flex-start;
+      }
+    }
+  }
+  &__album {
+    z-index: 1;
+    color: white;
+    font-weight: 400;
+
+    padding: 0.75rem 0 0 0;
+    @include tablet-desktop {
+      font-weight: 500;
+      padding: 2.75rem 0 0 0;
+    }
+  }
+  &__title {
+    z-index: 1;
+    font-weight: 500;
+    color: white;
+    padding: 1.25rem 0 0 0;
+    width: 84%;
+    @include tablet-desktop {
+      font-weight: 500;
+      padding: 1rem 0 0 0;
+    }
+  }
+  &__frame {
+    z-index: 1;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    height: 34vw;
+    width: 89vw;
+    border: none;
+    @include tablet-desktop {
+      padding: 1.25rem 2.25rem;
+      height: 21vw;
+      width: 56vw;
+    }
+    @include desktop {
+      height: 11vw;
+      width: 40vw;
+    }
+  }
+}
+// Shows Section
+
+.shows {
+  @include tablet-desktop {
+    padding: 2rem 1rem;
+  }
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__box {
+    @include desktop {
+      width: 75%;
+    }
+  }
+  &__title {
+    padding: 1.5rem 1rem;
+    font-weight: 600;
+  }
+  &__table {
+    @include tablet-desktop {
+      display: flex;
+    }
+  }
+  &__label {
+    color: $silver;
+    @include tablet-desktop {
+      padding: 0 0 2rem 0;
+    }
+  }
+  &__date {
+    font-weight: 500;
+  }
+  &__button {
+    width: 100%;
+    max-height: 40px;
+    border-radius: 0.25rem;
+    color: $white;
+    background-color: $bandsite-black;
+    font-size: 1.125rem;
+    line-height: 0.25rem;
+    font-weight: 500;
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+
+    @include tablet-desktop {
+      width: 150px;
+      // margin: 3rem 0 2rem 0;
+    }
+    &--container {
+      width: 90%;
+      padding: 0 0.9375rem 0;
+      @include tablet-desktop {
+        width: 25%;
+        padding: 3rem 0.9375rem 1.5rem;
+      }
+    }
+    &__container :hover {
+      background-color: $alabaster;
+    }
+
+    &:hover {
+      background-color: $bandsite-darkblack;
+    }
+  }
+
+  &__container:not(:first-of-type) .shows__button--container {
+    @include tablet-desktop {
+      padding: 1rem 0.9375rem 0;
+    }
+  }
+
+  &__container:not(:first-of-type) .shows__label {
+    @include tablet-desktop {
+      display: none;
+    }
+  }
+
+  &__container:not(:first-of-type) .shows__location--container {
+    @include tablet-desktop {
+      padding: 1.5rem 1rem 0 1rem;
+    }
+  }
+  &__container:not(:first-of-type) .shows__venue--container {
+    @include tablet-desktop {
+      padding: 1.5rem 1rem 0 1rem;
+    }
+  }
+  &__container:not(:first-of-type) .shows__date--container {
+    @include tablet-desktop {
+      padding: 1.5rem 1rem 0 1rem;
+    }
+  }
+}
+
+.shows__location--container,
+.shows__venue--container,
+.shows__date--container {
+  padding: 0.5rem 1rem;
+
+  @include tablet-desktop {
+    width: 25%;
+  }
+}
+
+.divider {
+  border-bottom-color: $mercury;
+}
+.shows__container {
+  cursor: pointer;
+}
+.shows__container.selected {
+  background-color: #e1e1e1;
+}
