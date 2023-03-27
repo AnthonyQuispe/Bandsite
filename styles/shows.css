@@ -327,8 +327,18 @@ body {
 @media screen and (min-width: 768px) {
   .hero {
     height: 75vw;
-    background-position: bottom;
   }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    height: 63vw;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+  }
+}
+.hero__container {
+  display: flex;
 }
 .hero__border {
   position: absolute;
@@ -345,7 +355,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .hero__border {
-    min-height: 55vw;
+    height: 63vw;
   }
 }
 .hero__border--text {
@@ -411,10 +421,27 @@ body {
     width: 56vw;
   }
 }
+@media screen and (min-width: 1024px) {
+  .hero__frame {
+    height: 11vw;
+    width: 40vw;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .shows {
     padding: 2rem 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .shows {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .shows__box {
+    width: 75%;
   }
 }
 .shows__title {
@@ -511,4 +538,12 @@ body {
 
 .divider {
   border-bottom-color: #e1e1e1;
+}
+
+.shows__container {
+  cursor: pointer;
+}
+
+.shows__container.selected {
+  background-color: #e1e1e1;
 }/*# sourceMappingURL=shows.css.map */

@@ -14,7 +14,17 @@
 
   @include tablet-desktop {
     height: 75vw;
-    background-position: bottom;
+  }
+
+  @include desktop {
+    height: 63vw;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+  }
+
+  &__container {
+    display: flex;
   }
 
   &__border {
@@ -28,7 +38,7 @@
       background-position: bottom;
     }
     @include desktop {
-      min-height: 55vw;
+      height: 63vw;
     }
 
     &--text {
@@ -88,6 +98,10 @@
       height: 21vw;
       width: 56vw;
     }
+    @include desktop {
+      height: 11vw;
+      width: 40vw;
+    }
   }
 }
 // Shows Section
@@ -95,6 +109,15 @@
 .shows {
   @include tablet-desktop {
     padding: 2rem 1rem;
+  }
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__box {
+    @include desktop {
+      width: 75%;
+    }
   }
   &__title {
     padding: 1.5rem 1rem;
@@ -188,4 +211,10 @@
 
 .divider {
   border-bottom-color: $mercury;
+}
+.shows__container {
+  cursor: pointer;
+}
+.shows__container.selected {
+  background-color: #e1e1e1;
 }

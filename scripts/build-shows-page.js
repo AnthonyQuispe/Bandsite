@@ -1,10 +1,13 @@
 // Created new Hero Section
 const heroSection = document.querySelector(".hero");
 
+//
+const heroContainer = document.querySelector(".hero__container");
+
 //Hero Frame Div
 const heroFrameBorder = document.createElement("div");
 heroFrameBorder.className = "hero__border--frame";
-heroSection.appendChild(heroFrameBorder);
+heroContainer.appendChild(heroFrameBorder);
 
 //Hero Frame
 const heroFrame = document.createElement("iframe");
@@ -29,6 +32,10 @@ const showsTitle = document.createElement("h2");
 showsTitle.classList.add("shows__title", "section-header");
 showsTitle.textContent = "Shows";
 showsSection.appendChild(showsTitle);
+
+const showsBox = document.createElement("div");
+showsBox.classList.add("shows__box");
+showsSection.appendChild(showsBox);
 
 // Shows Array
 const shows = [
@@ -149,5 +156,14 @@ function updateShows(shows) {
 for (let i = 0; i < shows.length; i++) {
   const show = shows[i];
   const showElement = updateShows(show);
-  showsSection.appendChild(showElement);
+  showsBox.appendChild(showElement);
 }
+const showsContainerClick = document.querySelectorAll(".shows__container");
+shows.forEach((shows) => {
+  shows.addEventListener("click", function () {
+    shows.forEach((card) => {
+      showsContainers.classList.remove("selected");
+    });
+    this.classList.add("selected");
+  });
+});
