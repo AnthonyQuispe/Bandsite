@@ -159,10 +159,10 @@ for (let i = 0; i < shows.length; i++) {
   showsBox.appendChild(showElement);
 }
 const showsContainerClick = document.querySelectorAll(".shows__container");
-shows.forEach((shows) => {
+showsContainerClick.forEach((shows) => {
   shows.addEventListener("click", function () {
-    shows.forEach((card) => {
-      showsContainers.classList.remove("selected");
+    showsContainerClick.forEach((card) => {
+      card.classList.remove("selected");
     });
     this.classList.add("selected");
   });
