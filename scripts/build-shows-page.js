@@ -12,7 +12,6 @@ heroFrame.className = "hero__frame";
 heroFrame.src =
   "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/766650868&color=%23302629&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true";
 heroFrame.allow = "autoplay";
-heroFrame.setAttribute("frameborder", "0");
 
 // heroFrame.frameborder = "no";
 heroFrameBorder.appendChild(heroFrame);
@@ -67,13 +66,18 @@ const shows = [
 
 function updateShows(shows) {
   //shows Container
-  const showsContainers = document.createElement("div");
+  const showsContainers = document.createElement("article");
   showsContainers.classList.add("shows__container");
+
+  //Shows Table
+  const showsTable = document.createElement("div");
+  showsTable.className = "shows__table";
+  showsContainers.appendChild(showsTable);
 
   //shows dateContainer
   const showsDateContainers = document.createElement("div");
   showsDateContainers.classList.add("shows__date--container");
-  showsContainers.appendChild(showsDateContainers);
+  showsTable.appendChild(showsDateContainers);
 
   //shows Date Label
   const dateLabel = document.createElement("p");
@@ -90,7 +94,7 @@ function updateShows(shows) {
   //shows venueContainer
   const showsVenueContainers = document.createElement("div");
   showsVenueContainers.classList.add("shows__venue--container");
-  showsContainers.appendChild(showsVenueContainers);
+  showsTable.appendChild(showsVenueContainers);
 
   //shows Venue Label
   const venueLabel = document.createElement("p");
@@ -107,7 +111,7 @@ function updateShows(shows) {
   //location venueContainer
   const showsLocationContainers = document.createElement("div");
   showsLocationContainers.classList.add("shows__location--container");
-  showsContainers.appendChild(showsLocationContainers);
+  showsTable.appendChild(showsLocationContainers);
 
   //shows location Label
   const locationLabel = document.createElement("p");
@@ -124,14 +128,14 @@ function updateShows(shows) {
   //location buttonContainer
   const showsButtonContainers = document.createElement("div");
   showsButtonContainers.classList.add("shows__button--container");
-  showsContainers.appendChild(showsButtonContainers);
+  showsTable.appendChild(showsButtonContainers);
 
   //button
   const button = document.createElement("button");
   button.classList.add("shows__button");
   button.type = "submit";
   button.value = "submit";
-  button.innerText = "Buy Ticket";
+  button.innerText = "Buy Tickets";
   showsButtonContainers.appendChild(button);
 
   //Divider

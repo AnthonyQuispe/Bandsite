@@ -72,7 +72,7 @@ function updateComment(comment) {
   return commentContainer;
 }
 
-function renderComment() {
+function displayComment() {
   const mycommentsEl = document.querySelector(".comment__bottom");
 
   // Clear the old comments so it does not run when there is a new comment
@@ -96,10 +96,10 @@ function commentFormSubmit(event) {
   };
 
   comments.unshift(commentData);
-  renderComment();
+  displayComment();
 }
 
 // Create a variable for Comment Form class
 const commentForm = document.querySelector("#comment-form");
 commentForm.addEventListener("submit", commentFormSubmit);
-renderComment();
+displayComment();
