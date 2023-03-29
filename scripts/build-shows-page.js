@@ -1,3 +1,7 @@
+// API
+const URL = "https://project-1-api.herokuapp.com";
+const API_KEY = "?api_key=e83adf2d-1d3f-4330-b2c2-ebafbeee0099";
+
 // Created new Hero Section
 const heroSection = document.querySelector(".hero");
 
@@ -38,38 +42,47 @@ showsBox.classList.add("shows__box");
 showsSection.appendChild(showsBox);
 
 // Shows Array
-const shows = [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: " San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 21 2021 ",
-    venue: "Pier 3 East",
-    location: " San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021 ",
-    venue: "View Lounge",
-    location: " San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 06 2021  ",
-    venue: "Hyatt Agency",
-    location: " San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 26 2021 ",
-    venue: "Moscow Center",
-    location: " San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 15 2021  ",
-    venue: "Press Club",
-    location: " San Francisco, CA",
-  },
+let shows = [
+  // {
+  //   date: "Mon Sept 06 2021",
+  //   venue: "Ronald Lane",
+  //   location: " San Francisco, CA",
+  // },
+  // {
+  //   date: "Tue Sept 21 2021 ",
+  //   venue: "Pier 3 East",
+  //   location: " San Francisco, CA",
+  // },
+  // {
+  //   date: "Fri Oct 15 2021 ",
+  //   venue: "View Lounge",
+  //   location: " San Francisco, CA",
+  // },
+  // {
+  //   date: "Sat Nov 06 2021  ",
+  //   venue: "Hyatt Agency",
+  //   location: " San Francisco, CA",
+  // },
+  // {
+  //   date: "Fri Nov 26 2021 ",
+  //   venue: "Moscow Center",
+  //   location: " San Francisco, CA",
+  // },
+  // {
+  //   date: "Wed Dec 15 2021  ",
+  //   venue: "Press Club",
+  //   location: " San Francisco, CA",
+  // },
 ];
+
+axios
+  .get(`${URL}/showdates${API_KEY}`)
+  .then((response) => {
+    shows = response.data;
+    console.log(shows); // <--- move the processing code here
+    updateShows(shows);
+  })
+  .catch((error) => console.error("Error getting comments", error));
 
 function updateShows(shows) {
   //shows Container
