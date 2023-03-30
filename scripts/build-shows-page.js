@@ -42,45 +42,28 @@ showsBox.classList.add("shows__box");
 showsSection.appendChild(showsBox);
 
 // Shows Array
-let shows = [
-  // {
-  //   date: "Mon Sept 06 2021",
-  //   venue: "Ronald Lane",
-  //   location: " San Francisco, CA",
-  // },
-  // {
-  //   date: "Tue Sept 21 2021 ",
-  //   venue: "Pier 3 East",
-  //   location: " San Francisco, CA",
-  // },
-  // {
-  //   date: "Fri Oct 15 2021 ",
-  //   venue: "View Lounge",
-  //   location: " San Francisco, CA",
-  // },
-  // {
-  //   date: "Sat Nov 06 2021  ",
-  //   venue: "Hyatt Agency",
-  //   location: " San Francisco, CA",
-  // },
-  // {
-  //   date: "Fri Nov 26 2021 ",
-  //   venue: "Moscow Center",
-  //   location: " San Francisco, CA",
-  // },
-  // {
-  //   date: "Wed Dec 15 2021  ",
-  //   venue: "Press Club",
-  //   location: " San Francisco, CA",
-  // },
-];
+let shows = [];
 
 axios
   .get(`${URL}/showdates${API_KEY}`)
   .then((response) => {
-    shows = response.data;
-    console.log(shows); // <--- move the processing code here
-    updateShows(shows);
+    const shows = response.data;
+    console.log(shows);
+    for (let i = 0; i < shows.length; i++) {
+      const show = shows[i];
+      const showElement = updateShows(show);
+      showsBox.appendChild(showElement);
+    }
+    const showsContainerClick = document.querySelectorAll(".shows__container");
+
+    showsContainerClick.forEach((shows) => {
+      shows.addEventListener("click", function () {
+        showsContainerClick.forEach((card) => {
+          card.classList.remove("selected");
+        });
+        this.classList.add("selected");
+      });
+    });
   })
   .catch((error) => console.error("Error getting comments", error));
 
@@ -107,7 +90,7 @@ function updateShows(shows) {
 
   //shows Date
   const date = document.createElement("p");
-  date.innerText = shows.date;
+  date.innerText = new Date(shows.date).toDateString();
   date.classList.add("shows__date");
   showsDateContainers.appendChild(date);
 
@@ -124,7 +107,7 @@ function updateShows(shows) {
 
   //shows Venue
   const venue = document.createElement("p");
-  venue.innerText = shows.venue;
+  venue.innerText = shows.place;
   venue.classList.add("shows__venue");
   showsVenueContainers.appendChild(venue);
 
@@ -171,12 +154,3 @@ for (let i = 0; i < shows.length; i++) {
   const showElement = updateShows(show);
   showsBox.appendChild(showElement);
 }
-const showsContainerClick = document.querySelectorAll(".shows__container");
-showsContainerClick.forEach((shows) => {
-  shows.addEventListener("click", function () {
-    showsContainerClick.forEach((card) => {
-      card.classList.remove("selected");
-    });
-    this.classList.add("selected");
-  });
-});
