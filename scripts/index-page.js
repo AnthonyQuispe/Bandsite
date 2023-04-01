@@ -73,7 +73,7 @@ function updateComment(comment) {
 
 function displayComment() {
   const mycommentsEl = document.querySelector(".comment__bottom");
-  // Clear the old comments so it does not run when there is a new comment
+
   mycommentsEl.innerHTML = "";
 
   comments.forEach((comment) => {

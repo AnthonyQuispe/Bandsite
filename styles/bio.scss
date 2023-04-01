@@ -261,6 +261,12 @@
     border-color: #e1e1e1;
     background-color: #fafafa;
   }
+
+  &__input--name:focus {
+    border: 1px solid #323232;
+    outline: none;
+  }
+
   // Comment Button
   &__button {
     width: 100%;
@@ -324,6 +330,10 @@
     border-color: #e1e1e1;
     background-color: #fafafa;
     resize: none;
+  }
+  &__input--comment:focus {
+    border: 1px solid #323232;
+    outline: none;
   }
   &__container--name {
     font-weight: 500;
