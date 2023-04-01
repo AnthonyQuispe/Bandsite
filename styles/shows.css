@@ -470,7 +470,7 @@ body {
 .shows__date {
   font-weight: 500;
 }
-.shows.shows__container.selected {
+.shows__container.selected {
   background-color: #e1e1e1;
 }
 .shows__container:not(.selected):hover {

@@ -54,6 +54,7 @@ axios
       const showElement = updateShows(show);
       showsBox.appendChild(showElement);
     }
+
     const showsContainerClick = document.querySelectorAll(".shows__container");
 
     showsContainerClick.forEach((shows) => {
