@@ -65,7 +65,7 @@ axios
       });
     });
   })
-  .catch((error) => console.error("Error getting comments", error));
+  .catch((error) => console.error("Error getting Showtimes Times", error));
 
 function updateShows(shows) {
   //shows Container
