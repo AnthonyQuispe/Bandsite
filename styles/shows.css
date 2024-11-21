@@ -101,6 +101,11 @@ body {
   font-family: "Avenir Next";
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
