@@ -321,38 +321,28 @@ body {
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 60vw;
+  min-height: calc(100dvh - 80px);
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 58vw;
     background-position: bottom;
   }
 }
-@media screen and (min-width: 1024px) {
-  .hero {
-    min-height: 55vw;
-  }
-}
+
 .hero__border {
   position: absolute;
   width: 100%;
-  min-height: 60vw;
+  min-height: calc(100dvh - 80px);
   background-color: #323232;
   opacity: 0.5;
 }
 @media screen and (min-width: 768px) {
   .hero__border {
-    height: 58vw;
     background-position: bottom;
   }
 }
-@media screen and (min-width: 1024px) {
-  .hero__border {
-    min-height: 55vw;
-  }
-}
+
 .hero__heading {
   padding: 0 16px;
   z-index: 1;
